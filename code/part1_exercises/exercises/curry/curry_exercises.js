@@ -14,7 +14,11 @@ var words = function(str) {
 //==============
 // Use map to make a new words fn that works on an array of strings.
 
-var sentences = undefined;
+var sentences = function(array) {
+  return array.map(function(str){
+    return words(str); 
+  })
+};
 
 
 // Exercise 2
@@ -40,7 +44,7 @@ var max = function(xs) {
   }, -Infinity, xs);
 };
 
-  
+
 // Bonus 1:
 // ============
 // wrap array's slice to be functional and curried.
